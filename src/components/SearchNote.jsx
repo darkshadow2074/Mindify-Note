@@ -29,7 +29,7 @@ const SearchNote=({searchActive,setSearchActive,filterActive,setFilterActive,set
     //     }else{
     //         return 0;
     //     }
-    }
+    // }
     const compare_Month = (a,b)=>{
         if(a.Month<b.Month){
             return 1;

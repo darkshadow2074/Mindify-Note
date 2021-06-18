@@ -1,0 +1,266 @@
+*{
+  box-sizing: border-box;
+  margin:0;
+  padding:0;
+}
+
+:root{
+  --search-box-background:#F7F7F7;
+  --search-icon-hover:#D3E7E7;
+  --body-background: #DDDDDD;
+  --filter-options-hover:#B2D5D5;
+  --button-primary:#24a0ed;
+  --button-primary-dark:#1185CD;
+  --button-secondary:#82C9F5;
+  --button-ternary:#B1DDF9;
+  --tw-border-opacity: 1;
+  --pink-background:#FCE7F3;
+  --purple-background:#EDE9FE;
+  --green-background:#d1fae5;
+  --yellow-background:#FEF3C7;
+  --red-background:#ffcccb;
+  --white-background:#ffff;
+}
+
+/*                          Search Component                        */
+body{
+  background-color: var(--body-background);
+}
+.searchComponent{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1.8rem;
+  margin:0.7rem;
+}
+
+.searchBar{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width:47%;
+  background-color: var(--search-box-background);
+  position: relative;
+  padding:0.7rem 0.5rem ;
+  border-radius:8px ;
+  margin-left: 1.4rem;
+  cursor: pointer;
+}
+
+.searchBar .search{
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   flex: 0.9;
+}
+
+.searchBar .search img{
+  width:35px;
+  height: 35px;
+  max-width: 100%;
+  border-radius: 50%;
+  padding: 0.21rem;
+}
+.searchBar .search img:hover{
+     background-color: var(--search-icon-hover);
+}
+.searchBar .search .searchText{
+  padding: 0.1rem;
+  width: 100%;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  color: black;
+  font-size: 20px;
+  margin-left: 0.5rem;
+}
+ .vertical{
+  border-left: 2px solid gray;
+  height: 40px;
+  width: 1.25px;
+}
+
+.searchBar.filter{
+  position:absolute;
+  right: 40px;
+  display: flex;
+  flex-direction: column;
+  
+}
+.filterButton{
+  padding:0.6rem;
+  border: none;
+  border-radius: 8px;
+  outline: none;
+  font-size: 18px;
+  cursor: pointer;
+
+}
+.filter .filterButton:hover{
+   background-color: var(--search-icon-hover);
+}
+.filter .filterOptions{
+
+  background-color: var(--search-icon-hover);
+  font-size: 18px;
+  padding:0.7rem 0rem;
+  position: absolute;
+  bottom: -187px;
+  right: 12px;
+  width: 150px;
+  text-align: center;
+  display:none;
+  flex-direction: column;
+}
+.filter .filterOptions p:hover{
+  background-color: var(--filter-options-hover) ;
+  cursor: pointer;
+}
+.filterOptions p{
+  padding:0.5rem;
+}
+
+
+
+/* Responsive Serach Component */
+
+
+
+
+
+/*  ADD NEW NOTE COMPONENT       */
+
+.addNoteComponent{
+  text-align: center;
+  width: 100%;
+}
+
+.noteBox{
+  margin:2rem auto;
+  width: 50%;
+  background-color: var(--search-icon-hover);
+  padding:1.3rem;
+}
+
+.noteBoxContainer{
+  width: 86%;
+  padding: 1.1rem;
+  margin: 1rem auto;
+  background-color: var(--search-box-background);
+  border-radius: 8px;
+}
+
+.noteBox .addTitle{
+  width: 100%;
+  background-color: transparent;
+  outline: none;
+  border:none;
+  font-size: 21px;
+}
+
+.noteBox .addNote{
+  width: 100%;
+  margin: 0.8rem auto auto auto;
+  outline: none;
+  border: none;
+  background-color: transparent;
+  border-top: 0.4px solid gray ;
+  padding-top: 1rem;
+  font-size: 18px;
+}
+.noteBox .addNote::-webkit-resizer{
+  display: none;
+
+}
+
+
+/*      ADD NOTE UTILITY COMPONENT       */
+.utilityComponent{
+  position: relative;
+}
+
+.utilityComponent .calendar{
+    position: absolute;
+    top:100%;
+    left: 10px;
+}
+
+.utility{
+  margin-top: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding:0.5rem ;
+}
+
+.utility .color1,.color2,.color3,.color4,.color5,.color6{
+  width: 23px;
+  height: 23px;
+  border-radius:50% ;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  margin:0.3rem ;
+  border: 2px solid rgba(209,213,219,var(--tw-border-opacity));
+}
+
+.utility .color1{
+  background: var(--pink-background);
+}
+.utility .color2{
+  background: var(--yellow-background);
+}
+.utility .color3{
+  background: var(--purple-background);
+}
+.utility .color4{
+  background: var(--green-background);
+}
+.utility .color5{
+  background: var(--red-background);
+}
+.utility .color6{
+  background: var(--white-background);
+}
+.utility .dateUtility,.clearUtility,.addUtility{
+     background: transparent;
+     padding: 0.5rem;
+     border: none;
+     outline: none;
+     font-size: 17px;
+     cursor: pointer;
+     min-width: 86px;
+     border-radius: 10px;
+     text-transform: uppercase;
+     transition: 0.3s;
+}
+.utility .dateUtility{
+  border: 1px solid var(--button-primary);
+  color: var(--button-primary);
+  padding: 0.4rem;
+  font-weight: 600;
+  display: flex;
+}
+.utility .dateUtility:hover{
+  background: var(--button-ternary);
+}
+.utility .clearUtility{
+  color: var(--button-primary);
+  font-weight: 600;
+}
+
+.utility .clearUtility:hover{
+  background: var(--button-secondary);
+  color: white;
+}
+
+.utility .addUtility{
+  background: var(--button-primary);
+  color: white;
+  font-weight: 700;
+  
+}
+
+.utility .addUtility:hover{
+  background: var(--button-primary-dark);
+}

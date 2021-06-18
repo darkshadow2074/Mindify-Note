@@ -1,11 +1,14 @@
-import React from 'react'
+import React, { useState } from 'react'
 import searchIcon from "./assets/images/search.png"
 import { MdKeyboardArrowDown } from "react-icons/md";
 // import DisplayNoteUtility from './DisplayNoteUtility';
 import "../App.css"
 export let searchData = [];
 const SearchNote=({searchActive,setSearchActive,filterActive,setFilterActive,setFilterSelected,date,month,year,title,setTitle,note,setNote,noteAdded,setNoteAdded})=> {
-    
+    const[newFilter,setNewFilter]=useState(false);
+    const [yearFilter,setYearFilter] = useState(false)
+    const [monthFilter,setMonthFilter] = useState(false)
+    const [dateFilter,setDateFilter] = useState(false)
     const searchHandler =(e) =>{
         
         let search = e.target.value;
@@ -60,24 +63,28 @@ const SearchNote=({searchActive,setSearchActive,filterActive,setFilterActive,set
     const newHandler = ()=>{
         setFilterSelected(true);
         setFilterActive(false);
-        noteAdded.reverse();
+        setNewFilter(!newFilter?true:false)
+        newFilter?noteAdded.reverse():null;
     }
 
     const monthHandler = ()=>{
        setFilterSelected(true);
        setFilterActive(false);
-       noteAdded=noteAdded.sort(compare_Month);
+       setMonthFilter(!newMonth?true:false)
+       newMonth?noteAdded=noteAdded.sort(compare_Month):null;
     }
     const yearHandler = ()=>{
        setFilterSelected(true);
        setFilterActive(false);
-       noteAdded.sort(compare_Year);
+       setYearFilter(!yearFilter?true:false);
+       yearFilter?noteAdded.sort(compare_Year):null;
 
     }
     const dateHandler = ()=>{
         setFilterSelected(true);
         setFilterActive(false);
-        noteAdded.sort(compare_Date);
+        setDateFilter(!dateFilter?true:false)
+        dateFilter?noteAdded.sort(compare_Date):null;
     }
    
     return (

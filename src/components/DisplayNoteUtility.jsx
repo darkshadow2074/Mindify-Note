@@ -1,7 +1,4 @@
-import React,{useState} from 'react'
-import { MdKeyboardArrowDown,MdKeyboardCapslock, MdNoteAdd } from "react-icons/md";
-import nextId from "react-id-generator";  
-import Calendar from 'react-calendar'
+import React from 'react'
 import 'react-calendar/dist/Calendar.css';
 
 const DisplayNoteUtility=({setActivateNote,Id,title,note,setTitle,setNote,setNoteAdded,noteAdded,activateNote})=> {

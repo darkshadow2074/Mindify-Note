@@ -1,7 +1,7 @@
 import React from 'react'
 import searchIcon from "./assets/images/search.png"
-import { MdKeyboardArrowDown,MdKeyboardCapslock } from "react-icons/md";
-import DisplayNoteUtility from './DisplayNoteUtility';
+import { MdKeyboardArrowDown } from "react-icons/md";
+// import DisplayNoteUtility from './DisplayNoteUtility';
 import "../App.css"
 export let searchData = [];
 const SearchNote=({searchActive,setSearchActive,filterActive,setFilterActive,setFilterSelected,date,month,year,title,setTitle,note,setNote,noteAdded,setNoteAdded})=> {

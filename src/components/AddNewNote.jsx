@@ -1,4 +1,4 @@
-import React , {useState} from 'react'
+import React  from 'react'
 import AddNoteUtility from './AddNoteUtility';
 import DisplayNote from './DisplayNote';
 import {searchData} from "./SearchNote"

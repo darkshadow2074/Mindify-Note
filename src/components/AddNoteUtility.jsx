@@ -1,5 +1,5 @@
 import React,{useState} from 'react'
-import { MdKeyboardArrowDown,MdKeyboardCapslock } from "react-icons/md"
+import { MdKeyboardArrowDown } from "react-icons/md"
 import moment from "moment"
 import Calendar from 'react-calendar'
 import nextId from "react-id-generator";

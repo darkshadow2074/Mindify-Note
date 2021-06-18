@@ -17,10 +17,10 @@ const SearchNote=({searchActive,setSearchActive,filterActive,setFilterActive,set
                 setSearchActive(false);
             }
     }    
-    // const filterHandler = () =>{
-    //     setFilterActive(filterActive?false:true);
-    //     setFilterSelected(false);
-    // }
+    const filterHandler = () =>{
+        setFilterActive(filterActive?false:true);
+        setFilterSelected(false);
+    }
     // const compare_FullDate = (a,b)=>{
     //     if(a.FullDate<b.FullDate){
     //         return 1;
@@ -29,7 +29,7 @@ const SearchNote=({searchActive,setSearchActive,filterActive,setFilterActive,set
     //     }else{
     //         return 0;
     //     }
-    // }
+    }
     const compare_Month = (a,b)=>{
         if(a.Month<b.Month){
             return 1;

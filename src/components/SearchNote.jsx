@@ -60,7 +60,7 @@ const SearchNote=({searchActive,setSearchActive,filterActive,setFilterActive,set
     const newHandler = ()=>{
         setFilterSelected(true);
         setFilterActive(false);
-        noteAdded.sort((a,b)=> b-a);
+        noteAdded.reverse();
     }
 
     const monthHandler = ()=>{

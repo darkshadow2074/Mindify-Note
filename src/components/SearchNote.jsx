@@ -71,7 +71,7 @@ const SearchNote=({searchActive,setSearchActive,filterActive,setFilterActive,set
        setFilterSelected(true);
        setFilterActive(false);
        setMonthFilter(!newMonth?true:false)
-       newMonth?noteAdded=noteAdded.sort(compare_Month):null;
+       monthFilter?noteAdded=noteAdded.sort(compare_Month):null;
     }
     const yearHandler = ()=>{
        setFilterSelected(true);

@@ -60,13 +60,13 @@ const SearchNote=({searchActive,setSearchActive,filterActive,setFilterActive,set
     const newHandler = ()=>{
         setFilterSelected(true);
         setFilterActive(false);
-        noteAdded.sort(compare_FullDate);
+        noteAdded.sort((a,b)=> b-a);
     }
 
     const monthHandler = ()=>{
        setFilterSelected(true);
        setFilterActive(false);
-       noteAdded.sort(compare_Month);
+       noteAdded=noteAdded.sort(compare_Month);
     }
     const yearHandler = ()=>{
        setFilterSelected(true);

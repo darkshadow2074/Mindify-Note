@@ -27,7 +27,8 @@ const [note,setNote] = useState("");
 const [searchActive,setSearchActive] = useState(false);
 const [noteAdded,setNoteAdded] = useState([defaultNote]);
 const [filterActive,setFilterActive] = useState(false)
-const [filterSelected,setFilterSelected] = useState(false)
+const [filterSelected,setFilterSelected] = useState(false);
+console.log(filterSelected);
   return (
     <div className="App">
         <SearchNote searchActive={searchActive} setSearchActive={setSearchActive} filterActive={filterActive} setFilterActive={setFilterActive} setFilterSelected={setFilterSelected} defaultNote={defaultNote} dateObj={dateObj} activateNote={activateNote} setActivateNote={setActivateNote} dateActive={dateActive} setDateActive={setDateActive} dateState={dateState} setDateState={setDateState} date={date} setDate={setDate} month={month} setMonth={setMonth} year={year} setYear={setYear} title={title} setTitle={setTitle} note={note} setNote={setNote} noteAdded={noteAdded} setNoteAdded={setNoteAdded} /> 

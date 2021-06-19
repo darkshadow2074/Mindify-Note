@@ -64,27 +64,27 @@ const SearchNote=({searchActive,setSearchActive,filterActive,setFilterActive,set
         setFilterSelected(true);
         setFilterActive(false);
         setNewFilter(!newFilter?true:false);
-        newFilter===true?noteAdded.reverse():null;
+        newFilter===true?(noteAdded.reverse()):noteAdded;
     }
 
     const monthHandler = ()=>{
        setFilterSelected(true);
        setFilterActive(false);
        setMonthFilter(!monthFilter?true:false)
-       monthFilter===true?noteAdded.sort(compare_Month):null;
+       monthFilter===true?(noteAdded.sort(compare_Month)):noteAdded;
     }
     const yearHandler = ()=>{
        setFilterSelected(true);
        setFilterActive(false);
        setYearFilter(!yearFilter?true:false);
-       yearFilter===true?noteAdded.sort(compare_Year):null;
+       yearFilter===true?(noteAdded.sort(compare_Year)):noteAdded;
 
     }
     const dateHandler = ()=>{
         setFilterSelected(true);
         setFilterActive(false);
         setDateFilter(!dateFilter?true:false)
-        dateFilter===true?noteAdded.sort(compare_Date):null;
+        dateFilter===true?(noteAdded.sort(compare_Date)):noteAdded;
     }
    
     return (

@@ -4,11 +4,12 @@ function DisplayNote({activateNote,setActivateNote,setTitle,setNote,noteAdded,se
     return (
         <div className="displayNote">
         <h1 className="displayHeading">Your Note's</h1>
-        {
+         <div className="noteContainer">
+         {
            noteAdded.map(({Id,Title,Note,FullDate},index)=>{
                return(
-                 <div className="noteBox" key={Id}>
-                    <div className="noteBoxContainer">
+                 <div className="displayNoteBox" key={Id}>
+                    <div className="displayNoteBoxContainer">
                        <input type="text" className="addTitle"  placeholder="Title" value={Title}  onInput={(e)=>{setTitle(e.target.value)}}/>
                        {
                         <><textarea className="addNote" placeholder="Take a Note"  value={Note} rows="5" cols="10" onChange={(e)=>setNote(e.target.value)} /> <DisplayNoteUtility setActivateNote={setActivateNote} Id={Id} title={Title} note={Note} setTitle={setTitle} setNote={setNote} setNoteAdded={setNoteAdded} noteAdded={noteAdded} activateNote={activateNote} /> </>
@@ -19,6 +20,7 @@ function DisplayNote({activateNote,setActivateNote,setTitle,setNote,noteAdded,se
                )
            })
         }
+         </div>
     </div>
     )
 }

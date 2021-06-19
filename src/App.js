@@ -9,7 +9,7 @@ function App() {
     Id:nextId("Default"),
     Title: "Welcome to Mindify",
     Note : "This is a sample note, please feel free to edit or delete this note and Get started with creating your own notes!",
-    FullDate : `Thu Jun 17 2021 22:12:01`,
+    FullDate : `Thu Jun 17 2021 `,
     noteDate : null,
     Month : null,
     Year : null,

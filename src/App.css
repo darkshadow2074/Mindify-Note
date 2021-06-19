@@ -122,7 +122,7 @@ body{
 
 
 
-/* Responsive Serach Component */
+/* Responsive Search Component */
 
 
 
@@ -135,14 +135,18 @@ body{
   width: 100%;
 }
 
-.noteBox{
+.noteBox,.displayNoteBox{
   margin:2rem auto;
   width: 50%;
-  background-color: var(--search-icon-hover);
+  /* background-color: var(--search-icon-hover); */
   padding:1.3rem;
 }
 
-.noteBoxContainer{
+.displayNoteBox{
+  width: 30%;
+}
+
+.noteBoxContainer,.displayNoteBoxContainer{
   width: 86%;
   padding: 1.1rem;
   margin: 1rem auto;
@@ -150,7 +154,7 @@ body{
   border-radius: 8px;
 }
 
-.noteBox .addTitle{
+.noteBox .addTitle,.displayNoteBox .addTitle{
   width: 100%;
   background-color: transparent;
   outline: none;
@@ -158,7 +162,7 @@ body{
   font-size: 21px;
 }
 
-.noteBox .addNote{
+.noteBox .addNote ,.displayNoteBox .addNote{
   width: 100%;
   margin: 0.8rem auto auto auto;
   outline: none;
@@ -168,11 +172,17 @@ body{
   padding-top: 1rem;
   font-size: 18px;
 }
-.noteBox .addNote::-webkit-resizer{
+.noteBox .addNote::-webkit-resizer , .displayNoteBox .addNote::-webkit-resizer{
   display: none;
-
 }
 
+.noteContainer{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: stretch;
+  margin: 0.6rem;
+}
 
 /*      ADD NOTE UTILITY COMPONENT       */
 .utilityComponent{

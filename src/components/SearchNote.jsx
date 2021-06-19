@@ -63,28 +63,28 @@ const SearchNote=({searchActive,setSearchActive,filterActive,setFilterActive,set
     const newHandler = ()=>{
         setFilterSelected(true);
         setFilterActive(false);
-        setNewFilter(!newFilter?true:false)
-        newFilter?noteAdded.reverse():null;
+        setNewFilter(!newFilter?true:false);
+        newFilter===true?noteAdded.reverse():null;
     }
 
     const monthHandler = ()=>{
        setFilterSelected(true);
        setFilterActive(false);
        setMonthFilter(!monthFilter?true:false)
-       monthFilter?noteAdded=noteAdded.sort(compare_Month):null;
+       monthFilter===true?noteAdded.sort(compare_Month):null;
     }
     const yearHandler = ()=>{
        setFilterSelected(true);
        setFilterActive(false);
        setYearFilter(!yearFilter?true:false);
-       yearFilter?noteAdded.sort(compare_Year):null;
+       yearFilter===true?noteAdded.sort(compare_Year):null;
 
     }
     const dateHandler = ()=>{
         setFilterSelected(true);
         setFilterActive(false);
         setDateFilter(!dateFilter?true:false)
-        dateFilter?noteAdded.sort(compare_Date):null;
+        dateFilter===true?noteAdded.sort(compare_Date):null;
     }
    
     return (
